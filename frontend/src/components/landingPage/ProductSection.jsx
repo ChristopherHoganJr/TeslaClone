@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProductSection = () => {
+// components
+import PrimaryButton from "./PrimaryButton";
+import SecondaryButton from "./SecondaryButton";
+
+const ProductSection = ({
+  productName,
+  productSub,
+  primaryButtonText,
+  secondaryButtonText,
+}) => {
   return (
     <StyledProductSection>
       <StyledProductInfo>
-        <h2>Model 3</h2>
-        <p>Order Online for Touchless Delivery</p>
+        <h2>{productName}</h2>
+        <p>{productSub}</p>
       </StyledProductInfo>
       <StyledButtonContainer>
-        <a href='#'>Customer Order</a>
-        <a href='#'>Existing Inventory</a>
+        <PrimaryButton linkText={"Primary Button"} />
+        <SecondaryButton linkText={"Secondary Button"} />
       </StyledButtonContainer>
     </StyledProductSection>
   );
@@ -35,6 +44,9 @@ const StyledProductInfo = styled.div`
   }
 `;
 
-const StyledButtonContainer = styled.div``;
+const StyledButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
 
 export default ProductSection;

@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   background: green;
   display: flex;
   justify-content: space-between;
-  padding: 0px 1rem;
+  padding: 10px 1rem;
 `;
 
 const StyledSVG = styled.svg`
